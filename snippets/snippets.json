@@ -1,0 +1,352 @@
+{
+	"Assign Tag": {
+		"prefix": "assign",
+		"body": [
+			"{% assign $1 = $2 %}"
+		],
+		"description": "Liquid assign tag."
+	},
+
+	"Capture Tag": {
+		"prefix": "capture",
+		"body": [
+			"{% capture $1 %}",
+			"  $2",
+			"{% endcapture %}"
+		],
+		"description": "Liquid capture tag."
+	},
+
+	"Case Tag": {
+		"prefix": "case",
+		"body": [
+			"{% case $1 %}",
+			"  {% when $2 $}",
+			"    $3",
+			"  {% else %}",
+			"    $0",
+			"{% endcase %}"
+		],
+		"description": "Liquid case tag."
+	},
+
+	"Comment Tag": {
+		"prefix": "comment",
+		"body": [
+			"{% comment %}",
+			"  $0",
+			"{% endcomment %}"
+		],
+		"description": "Liquid comment tag."
+	},
+
+	"Comment Tag (inline)": {
+		"prefix": "comment:inline",
+		"body": [
+			"{% comment %} $0 {% endcomment %}"
+		],
+		"description": "Liquid comment tag (inline)."
+	},
+
+	"Cycle Tag": {
+		"prefix": "cycle",
+		"body": [
+			"{% cycle '$1', '$0' %}"
+		],
+		"description": "Liquid cycle tag."
+	},
+
+	"If Tag": {
+		"prefix": "if",
+		"body": [
+			"{% if $1 %}",
+			"  $0",
+			"{% endif %}"
+		],
+		"description": "Liquid if tag (only)."
+	},
+
+	"If/Else Tag": {
+		"prefix": "if:else",
+		"body": [
+			"{% if $1 %}",
+			"  $2",
+			"{% else %}",
+			"  $0",
+			"{% endif %}"
+		],
+		"description": "Liquid if tag with else."
+	},
+
+	"For Tag": {
+		"prefix": "for",
+		"body": [
+			"{% for $1 in $2 %}",
+			"  $0",
+			"{% endfor %}"
+		],
+		"description": "Liquid for tag."
+	},
+
+	"Form Tag (activate customer password": {
+		"prefix": "form:activate",
+		"body": [
+			"{% form 'activate_customer_password' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for customer password activation."
+	},
+
+	"Form Tag (article comment)": {
+		"prefix": "form:comment",
+		"body": [
+			"{% form 'new_comment', article %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for article comments."
+	},
+
+	"Form Tag (contact)": {
+		"prefix": "form:contact",
+		"body": [
+			"{% form 'contact' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for the contact form."
+	},
+
+	"Form Tag (currency selector)": {
+		"prefix": "form:currency",
+		"body": [
+			"{% form 'currency' %}",
+			"  {{ form | curency_selector }}",
+			"  <button type=\"submit\">Submit$0</button>",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for a currency converter."
+	},
+
+	"Form Tag (customer)": {
+		"prefix": "form:customer",
+		"body": [
+			"{% form 'customer' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for creating a customer without logging in."
+	},
+
+	"Form Tag (create customer)": {
+		"prefix": "form:create",
+		"body": [
+			"{% form 'create_customer' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for creating a customer."
+	},
+
+	"Form Tag (new customer address)": {
+		"prefix": "form:address:new",
+		"body": [
+			"{% form 'customer_address', customer.new_address %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for creating a new address."
+	},
+
+	"Form Tag (recover customer password": {
+		"prefix": "form:recover",
+		"body": [
+			"{% form 'recover_customer_password' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for recovering customer password."
+	},
+
+	"Form Tag (reset customer password": {
+		"prefix": "form:reset",
+		"body": [
+			"{% form 'reset_customer_password' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for resetting customer password."
+	},
+
+	"Form Tag (update customer address)": {
+		"prefix": "form:address:update",
+		"body": [
+			"{% form 'customer_address', address$1 %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for updating a customer address."
+	},
+
+	"Form Tag (customer login)": {
+		"prefix": "form:login",
+		"body": [
+			"{% form 'customer_login %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for the login form."
+	},
+
+	"Form Tag (guest login)": {
+		"prefix": "form:login:guest",
+		"body": [
+			"{% form 'guest_login' %}",
+			"  $0",
+			"{% endform %}"
+		],
+		"description": "Liquid form tag for guest login."
+	},
+
+	"Include Tag": {
+		"prefix": "include",
+		"body": [
+			"{% include '$0' %}"
+		],
+		"description": "Liquid include tag."
+	},
+
+	"Include Tag (with variables)": {
+		"prefix": "include:with",
+		"body": [
+			"{% include '$1' with {",
+			"  $0",
+			"} %}"
+		],
+		"description": "Liquid include tag with variables."
+	},
+
+	"Layout Tag": {
+		"prefix": "layout",
+		"body": [
+			"{% layout '$0' %}"
+		],
+		"description": "Liquid layout tag."
+	},
+
+	"Paginate Tag": {
+		"prefix": "paginate",
+		"body": [
+			"{% paginate $1 by $2 %}",
+			"  $0",
+			"{% endpaginate %}"
+		],
+		"description": "Liquid paginate tag."
+	},
+
+	"Raw Tag": {
+		"prefix": "raw",
+		"body": [
+			"{% raw %}",
+			"  $0",
+			"{% endraw %}"
+		],
+		"description": "Liquid raw tag."
+	},
+
+	"Section Tag": {
+		"prefix": "section",
+		"body": [
+			"{% section '$0' %}"
+		],
+		"description": "Liquid section tag."
+	},
+
+	"Schema Tag": {
+		"prefix": "schema",
+		"body": [
+			"{% schema %}",
+			"  {",
+			"    name: \"$1\"",
+			"    settings: [",
+			"      {",
+			"        $0",
+			"      }",
+			"    ]",
+			"  }",
+			"{% endschema %}"
+		],
+		"description": "Liquid schema tag, used in sections."
+	},
+
+	"Style Tag": {
+		"prefix": "style",
+		"body": [
+			"{% style %}",
+			"  $0",
+			"{% endstyle %}"
+		],
+		"description": "Liquid style tag."
+	},
+
+	"Tablerow Tag": {
+		"prefix": "tablerow",
+		"body": [
+			"{% tablerow $1 in $2 %}",
+			"  $0",
+			"{% endtablerow %}"
+		],
+		"description": "Liquid tablerow tag."
+	},
+
+	"Tablerow Tag (with columns)": {
+		"prefix": "tablerow:cols",
+		"body": [
+			"{% tablerow $1 in $2 cols: $3 %}",
+			"  $0",
+			"{% endtablerow %}"
+		],
+		"description": "Liquid tablerow tag wth columns parameter."
+	},
+
+	"Tablerow Tag (with limit)": {
+		"prefix": "tablerow:limit",
+		"body": [
+			"{% tablerow $1 in $2 limit: $3 %}",
+			"  $0",
+			"{% endtablerow %}"
+		],
+		"description": "Liquid tablerow tag with limit parameter."
+	},
+
+	"Tablerow Tag (with offset)": {
+		"prefix": "tablerow:offset",
+		"body": [
+			"{% tablerow $1 in $2 offset: $3 %}",
+			"  $0",
+			"{% endtablerow %}"
+		],
+		"description": "Liquid tablerow tag with offset parameter."
+	},
+
+	"Tablerow Tag (with range)": {
+		"prefix": "tablerow:range",
+		"body": [
+			"{% tablerow i in (1..$1) %}",
+			"  $0",
+			"{% endtablerow %}"
+		],
+		"description": "Liquid tablerow tag using a range."
+	},
+
+	"Unless Tag": {
+		"prefix": "unless",
+		"body": [
+			"{% unless $1 %}",
+			"  $0",
+			"{% endunless %}"
+		],
+		"description": "Liquid unless tag."
+	}
+}
