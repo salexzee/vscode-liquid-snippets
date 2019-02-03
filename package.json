@@ -1,6 +1,6 @@
 {
-  "name": "liquid-snippets",
-  "displayName": "liquid-snippets",
+  "name": "vscode-liquid-snippets",
+  "displayName": "vscode-liquid-snippets",
   "description": "A bunch of snippets for the Liquid templating language, specifically aimed at Shopify development.",
   "version": "1.0.0",
   "engines": {
